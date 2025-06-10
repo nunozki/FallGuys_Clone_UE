@@ -1,12 +1,12 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
-#include "FalloutGuys_Clone_UEPlayerController.h"
+#include "FallGuys_Clone_UEPlayerController.h"
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 #include "InputMappingContext.h"
 
-void AFalloutGuys_Clone_UEPlayerController::SetupInputComponent()
+void AFallGuys_Clone_UEPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 

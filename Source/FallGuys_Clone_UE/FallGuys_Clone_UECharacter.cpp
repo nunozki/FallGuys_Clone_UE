@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "FalloutGuys_Clone_UECharacter.h"
+#include "FallGuys_Clone_UECharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -13,7 +13,7 @@
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
-AFalloutGuys_Clone_UECharacter::AFalloutGuys_Clone_UECharacter()
+AFallGuys_Clone_UECharacter::AFallGuys_Clone_UECharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -51,7 +51,7 @@ AFalloutGuys_Clone_UECharacter::AFalloutGuys_Clone_UECharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
-void AFalloutGuys_Clone_UECharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AFallGuys_Clone_UECharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
@@ -61,11 +61,11 @@ void AFalloutGuys_Clone_UECharacter::SetupPlayerInputComponent(UInputComponent* 
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AFalloutGuys_Clone_UECharacter::Move);
-		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AFalloutGuys_Clone_UECharacter::Look);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AFallGuys_Clone_UECharacter::Move);
+		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AFallGuys_Clone_UECharacter::Look);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AFalloutGuys_Clone_UECharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AFallGuys_Clone_UECharacter::Look);
 	}
 	else
 	{
@@ -73,7 +73,7 @@ void AFalloutGuys_Clone_UECharacter::SetupPlayerInputComponent(UInputComponent* 
 	}
 }
 
-void AFalloutGuys_Clone_UECharacter::Move(const FInputActionValue& Value)
+void AFallGuys_Clone_UECharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -82,7 +82,7 @@ void AFalloutGuys_Clone_UECharacter::Move(const FInputActionValue& Value)
 	DoMove(MovementVector.X, MovementVector.Y);
 }
 
-void AFalloutGuys_Clone_UECharacter::Look(const FInputActionValue& Value)
+void AFallGuys_Clone_UECharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
@@ -91,7 +91,7 @@ void AFalloutGuys_Clone_UECharacter::Look(const FInputActionValue& Value)
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
 }
 
-void AFalloutGuys_Clone_UECharacter::DoMove(float Right, float Forward)
+void AFallGuys_Clone_UECharacter::DoMove(float Right, float Forward)
 {
 	if (GetController() != nullptr)
 	{
@@ -111,7 +111,7 @@ void AFalloutGuys_Clone_UECharacter::DoMove(float Right, float Forward)
 	}
 }
 
-void AFalloutGuys_Clone_UECharacter::DoLook(float Yaw, float Pitch)
+void AFallGuys_Clone_UECharacter::DoLook(float Yaw, float Pitch)
 {
 	if (GetController() != nullptr)
 	{
@@ -121,13 +121,13 @@ void AFalloutGuys_Clone_UECharacter::DoLook(float Yaw, float Pitch)
 	}
 }
 
-void AFalloutGuys_Clone_UECharacter::DoJumpStart()
+void AFallGuys_Clone_UECharacter::DoJumpStart()
 {
 	// signal the character to jump
 	Jump();
 }
 
-void AFalloutGuys_Clone_UECharacter::DoJumpEnd()
+void AFallGuys_Clone_UECharacter::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();

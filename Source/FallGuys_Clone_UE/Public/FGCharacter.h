@@ -7,7 +7,7 @@
 #include "FGCharacter.generated.h"
 
 UCLASS()
-class FALLOUTGUYS_CLONE_UE_API AFGCharacter : public ACharacter
+class FALLGUYS_CLONE_UE_API AFGCharacter : public ACharacter
 {
 	GENERATED_BODY()
 

@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class FalloutGuys_Clone_UE : ModuleRules
+public class FallGuys_Clone_UE : ModuleRules
 {
-	public FalloutGuys_Clone_UE(ReadOnlyTargetRules Target) : base(Target)
+	public FallGuys_Clone_UE(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -23,13 +23,13 @@ public class FalloutGuys_Clone_UE : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
 		PublicIncludePaths.AddRange(new string[] {
-			"FalloutGuys_Clone_UE",
-			"FalloutGuys_Clone_UE/Variant_Platforming",
-			"FalloutGuys_Clone_UE/Variant_Combat",
-			"FalloutGuys_Clone_UE/Variant_Combat/AI",
-			"FalloutGuys_Clone_UE/Variant_SideScrolling",
-			"FalloutGuys_Clone_UE/Variant_SideScrolling/Gameplay",
-			"FalloutGuys_Clone_UE/Variant_SideScrolling/AI"
+			"FallGuys_Clone_UE",
+			"FallGuys_Clone_UE/Variant_Platforming",
+			"FallGuys_Clone_UE/Variant_Combat",
+			"FallGuys_Clone_UE/Variant_Combat/AI",
+			"FallGuys_Clone_UE/Variant_SideScrolling",
+			"FallGuys_Clone_UE/Variant_SideScrolling/Gameplay",
+			"FallGuys_Clone_UE/Variant_SideScrolling/AI"
 		});
 
 		// Uncomment if you are using Slate UI

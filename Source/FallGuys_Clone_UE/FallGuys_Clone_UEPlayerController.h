@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "FalloutGuys_Clone_UEPlayerController.generated.h"
+#include "FallGuys_Clone_UEPlayerController.generated.h"
 
 class UInputMappingContext;
 
@@ -13,7 +13,7 @@ class UInputMappingContext;
  *  Manages input mappings
  */
 UCLASS(abstract)
-class AFalloutGuys_Clone_UEPlayerController : public APlayerController
+class AFallGuys_Clone_UEPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

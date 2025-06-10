@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "FalloutGuys_Clone_UECharacter.generated.h"
+#include "FallGuys_Clone_UECharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
@@ -19,7 +19,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
  *  Implements a controllable orbiting camera
  */
 UCLASS(abstract)
-class AFalloutGuys_Clone_UECharacter : public ACharacter
+class AFallGuys_Clone_UECharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -52,7 +52,7 @@ protected:
 public:
 
 	/** Constructor */
-	AFalloutGuys_Clone_UECharacter();	
+	AFallGuys_Clone_UECharacter();	
 
 protected:
 

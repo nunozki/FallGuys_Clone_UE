@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class FalloutGuys_Clone_UEEditorTarget : TargetRules
+public class FallGuys_Clone_UETarget : TargetRules
 {
-	public FalloutGuys_Clone_UEEditorTarget(TargetInfo Target) : base(Target)
+	public FallGuys_Clone_UETarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
+		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;
-		ExtraModuleNames.Add("FalloutGuys_Clone_UE");
+		ExtraModuleNames.Add("FallGuys_Clone_UE");
 	}
 }

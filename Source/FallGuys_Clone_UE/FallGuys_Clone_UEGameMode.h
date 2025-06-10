@@ -4,20 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "FalloutGuys_Clone_UEGameMode.generated.h"
+#include "FallGuys_Clone_UEGameMode.generated.h"
 
 /**
  *  Simple GameMode for a third person game
  */
 UCLASS(abstract)
-class AFalloutGuys_Clone_UEGameMode : public AGameModeBase
+class AFallGuys_Clone_UEGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
 	
 	/** Constructor */
-	AFalloutGuys_Clone_UEGameMode();
+	AFallGuys_Clone_UEGameMode();
 };
 
 
